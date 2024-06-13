@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="{{url_for('static',filename='css/style.css')}}" rel="stylesheet">
+    <title>Phishing.link</title>
+</head>
+
+<body style="background-image: url('static/img/A.jpeg');">
+    <div class="Phishing-bg">
+        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+            <header class="mb-auto">
+                <div class="menu">
+                    <ul>
+                        <li><a href="{{ url_for('home') }}">Home</a></li>
+                        <li><a href="{{ url_for('feat') }}">Features</a></li>
+                        <li><a href="#reservation">Contact</a></li>
+                    </ul>
+                </div>
+            </header>
+        </div>
+        <div class="ph-head">
+            <h1>Phishing-link</h1>
+            <h2 class="head">Phishing URL Detector</h2>
+            <p class="para">Phishing is a form of social engineering and scam where attackers deceive people into revealing sensitive information</p>
+            <h3 class="head2">Your URL :</h3>
+            <form action="{{ url_for('result') }}" method="post">
+                <input type="text" class="form-control" id="url" name="url">
+                <br>
+                <button type="submit" class="btn success" value="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
